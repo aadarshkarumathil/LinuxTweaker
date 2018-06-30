@@ -1,6 +1,4 @@
 # LinuxTweaker
-This script if for change linux ui and installing basic softwares on new installation of linux
-
 Change Linux Gnome shell to look better and makes the machine basic dev/penetration testing ready.
 
 
@@ -9,4 +7,6 @@ Change Linux Gnome shell to look better and makes the machine basic dev/penetrat
 
  ![LinuxTweaker/screenshot/Screenshot from 2018-06-30 17-23-44.png](https://raw.githubusercontent.com/aadarshkarumathil/LinuxTweaker/master/screenshot/Screenshot%20from%202018-06-30%2017-23-44.png)
 
-Adding it for kali
+Saves time when linux crashes.
+
+Adding it for kali soon.
