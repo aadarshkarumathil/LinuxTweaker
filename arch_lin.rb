@@ -59,7 +59,7 @@ if(selection=='Y') then
 	system('wget https://blackarch.org/strap.sh -O /tmp/strap.sh')
 	shasum = `sha1sum /tmp/strap.sh`.to_s
 	if(shasum != "73aae423a31410e021ef1b8f1becd573d2bd17dc") then
-		puts "hash sum not equal"
+		puts "hash not equal"
 		exit(0)
 	end
 	system('chmod +x /tmp/strap.sh & sudo "sh /tmp/strap.sh"')
