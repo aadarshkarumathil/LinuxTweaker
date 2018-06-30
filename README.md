@@ -1,5 +1,5 @@
 # LinuxTweaker
-Mainly wrote to saves time when linux crashes or when changing distros
+Mainly wrote to save time when linux crashes or when changing distros
 
 Change Linux Gnome shell to look better and makes the machine basic dev/penetration testing ready.
 
