@@ -19,6 +19,18 @@ system('sudo /usr/bin/gsettings set org.gnome.desktop.background picture-uri "fi
 puts "installing oh-my-zsh and beautifying ur linux terminal"
 system('git clone https://github.com/robbyrussell/oh-my-zsh.git /tmp/.oh-my-zsh')
 system('sh /.oh-my-zsh/tools/install.sh')
+system('git clone https://github.com/geometry-zsh/geometry.git ~/.oh-my-zsh/custom/themes/geometry')
+puts "Changing the theme to geometry"
+filename =  File.expand_path("~/.zshrc")
+puts filename
+text = File.read(filename)
+new_contents = text.gsub('ZSH_THEME="robbyrussell"','ZSH_THEME="geometry/geometry"')
+File.open(filename,"w") do |file|
+	file.puts new_contents
+	file.puts "GEOMETRY_PROMPT_PLUGINS=(virtualenv docker_machine exec_time git) \nGEOMETRY_COLOR_PROMPT='green' \nGEOMETRY_COLOR_ROOT='red' \nGEOMETRY_COLOR_DIR='blue' \narchey"
+end
+puts "Terminal setup done"
+
 
 #installing themes and additional tools.
 
@@ -40,17 +52,6 @@ system('sudo gpasswd -a $USER input')
 system('libinput-gestures-setup autostart & libinput-gestures-setup start')
 puts "libinput setup done"
 
-system('git clone https://github.com/geometry-zsh/geometry.git ~/.oh-my-zsh/custom/themes/geometry')
-puts "Changing the theme to geometry"
-filename =  File.expand_path("~/.zshrc")
-puts filename
-text = File.read(filename)
-new_contents = text.gsub('ZSH_THEME="robbyrussell"','ZSH_THEME="geometry/geometry"')
-File.open("zshrc","w") do |file|
-	file.puts new_contents
-	file.puts "GEOMETRY_PROMPT_PLUGINS=(virtualenv docker_machine exec_time git) \nGEOMETRY_COLOR_PROMPT='green' \nGEOMETRY_COLOR_ROOT='red' \nGEOMETRY_COLOR_DIR='blue' \narchey"
-end
-puts "Terminal setup done"
 
 #BLACKARCH INSTALL
 puts "Add Black arch repository ? Enter Y or N"
