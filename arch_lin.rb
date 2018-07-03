@@ -47,9 +47,9 @@ puts "Sublime installed"
 puts "Installing Libinput Guestures"
 system('sudo pacman -S xdotool wmctrl')
 system('git clone https://github.com/bulletmark/libinput-gestures.git /tmp/libinput-gestures')
-system('sudo ./tmp/libinput-gestures-setup install')
+system('sudo /tmp/libinput-gestures-setup install')
 system('sudo gpasswd -a $USER input')
-system('libinput-gestures-setup autostart & libinput-gestures-setup start')
+system('/tmp/libinput-gestures-setup autostart & /tmp/libinput-gestures-setup start')
 puts "libinput setup done"
 
 
