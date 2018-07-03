@@ -17,8 +17,8 @@ system('sudo /usr/bin/gsettings set org.gnome.desktop.background picture-uri "fi
 #installing oh-my-zsh
 
 puts "installing oh-my-zsh and beautifying ur linux terminal"
-system('git clone https://github.com/robbyrussell/oh-my-zsh.git /tmp/.oh-my-zsh')
-system('sh /.oh-my-zsh/tools/install.sh')
+system('git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh')
+system('sh ~/.oh-my-zsh/tools/install.sh')
 system('git clone https://github.com/geometry-zsh/geometry.git ~/.oh-my-zsh/custom/themes/geometry')
 puts "Changing the theme to geometry"
 filename =  File.expand_path("~/.zshrc")
@@ -27,7 +27,7 @@ text = File.read(filename)
 new_contents = text.gsub('ZSH_THEME="robbyrussell"','ZSH_THEME="geometry/geometry"')
 File.open(filename,"w") do |file|
 	file.puts new_contents
-	file.puts "GEOMETRY_PROMPT_PLUGINS=(virtualenv docker_machine exec_time git) \nGEOMETRY_COLOR_PROMPT='green' \nGEOMETRY_COLOR_ROOT='red' \nGEOMETRY_COLOR_DIR='blue' \narchey"
+	file.puts "GEOMETRY_PROMPT_PLUGINS=(virtualenv docker_machine exec_time git) \nGEOMETRY_COLOR_PROMPT='green' \nGEOMETRY_COLOR_ROOT='red' \nGEOMETRY_COLOR_DIR='blue' \narchey3"
 end
 puts "Terminal setup done"
 
@@ -35,7 +35,7 @@ puts "Terminal setup done"
 #installing themes and additional tools.
 
 puts "Setting up Arc theme, paper icon theme, firefox, docker"
-system('sudo pacman -S arc-gtk-theme paper-icon-theme firefox docker')
+system('sudo pacman -S arc-gtk-theme paper-icon-theme firefox docker archey3')
 puts "Installing Sublime Text"
 system('curl -O https://download.sublimetext.com/sublimehq-pub.gpg && sudo pacman-key --add sublimehq-pub.gpg && sudo pacman-key --lsign-key 8A8F901A && rm sublimehq-pub.gpg')
 system('echo -e "\n[sublime-text]\nServer = https://download.sublimetext.com/arch/stable/x86_64" | sudo tee -a /etc/pacman.conf')
