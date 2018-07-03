@@ -1,6 +1,6 @@
 #!/usr/bin/ruby
 puts "Hi, running upgrade now using pacman"
-system('pacman -Syu')
+system('sudo pacman -Syu')
 puts "upgrade complete"
 
 #installing basic tools
@@ -17,8 +17,8 @@ system('sudo /usr/bin/gsettings set org.gnome.desktop.background picture-uri "fi
 #installing oh-my-zsh
 
 puts "installing oh-my-zsh and beautifying ur linux terminal"
-system('git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh')
-system('sh ~/.oh-my-zsh/tools/install.sh')
+system('git clone https://github.com/robbyrussell/oh-my-zsh.git /tmp/.oh-my-zsh')
+system('sh /tmp/.oh-my-zsh/tools/install.sh')
 system('git clone https://github.com/geometry-zsh/geometry.git ~/.oh-my-zsh/custom/themes/geometry')
 puts "Changing the theme to geometry"
 filename =  File.expand_path("~/.zshrc")
