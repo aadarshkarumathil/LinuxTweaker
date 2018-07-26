@@ -20,5 +20,7 @@ features:-
 4. Makes UI better with arc theme and paper icons.
 5. installs sublime.
 
+For Manjaro Budgie:
+![Budgie.png]
 
 Adding it for kali soon.
