@@ -21,6 +21,8 @@ features:-
 5. installs sublime.
 
 For Manjaro Budgie:
-![Budgie.png]
+![Budgie.png](https://raw.githubusercontent.com/aadarshkarumathil/LinuxTweaker/master/screenshot/budgie.png)
+
+run arch_bugie.rb
 
 Adding it for kali soon.
